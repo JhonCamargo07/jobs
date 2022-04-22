@@ -21,7 +21,7 @@
             require('../controladores/jobs.php');
         ?>
         <div class="contenedor card margin-top">
-        <p class="card-2 bg-light-hover margin-bottom"><strong><span class="required">*</span>Tienes <?php echo $tareasFaltantes; ?> trabajos pendientes, son pocos, animo!<span class="required">*</span></strong></p>
+        <p class="card-2 bg-light-hover margin-bottom"><strong><span class="required">*</span><?php echo $listar->tareasMayorCero($tareasFaltantes) ? "Tienes " . $tareasFaltantes . "tareas pendientes, son pocas, animo!" : "Por el momento no tienes ninguna tarea" ?><span class="required">*</span></strong></p>
             <h1 class="text-center margin-bottom">Tareas pendientes</h1>
             <div class="jobs">
                 <?php

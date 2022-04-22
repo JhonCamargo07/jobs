@@ -7,7 +7,7 @@
     //Registrar usuario
     if(isset($_POST['registrar'])){
         $nombre = ucwords(strtolower((limpiarTexto($_POST['nombre']))));
-        $correo = limpiarTexto($_POST['correo']);
+        $correo = limpiarTexto($_POST['usuario']);
         $password = limpiarTexto($_POST['password']);
         $rol = isset(($_POST['rol'])) ? $_POST['rol'] : 2;
         $estado = isset(($_POST['estado'])) ? $_POST['estado'] : 1;
@@ -16,6 +16,7 @@
             echo '<script>
                     alertaFlotante("Complete todos los compos", "Algunos campos están vacios", "#0EA3E3", "imagenes/error.gif");
                 </script>';
+                echo '<div><strong><p><span class="required">*</span>Ningun campo puede estar vacio</p></strong></div>';
         }else{
             $resultadoRegistro = $usuario->insertUsuario($nombre, $correo, $password, $rol, $estado);
 
@@ -34,6 +35,7 @@
                 echo '<script>
                         alertaFlotante("El correo ya se encuentra registrado", "Verifique los datos e intente nuevamente", "#0EA3E3", "imagenes/error.gif");
                     </script>';
+                echo '<div><strong><p><span class="required">*</span>Escriba otro correo que no se encuentre registrado</p></strong></div>';
             }
         }
     }

@@ -25,7 +25,7 @@
             }
             hijosLista[3].classList.add("activo");
             if(fileName().match(/jobsEliminados.php*/)){
-                hijosLista[3].innerHTML = "<i class='icon-nav fas fa-check-circle'></i>Tareas eliminados";
+                hijosLista[3].innerHTML = "<i class='icon-nav fas fa-check-circle'></i>Tareas eliminadas";
             }
         }else if(extraerNameFile(l.clases.href) == "clases.php" && fileName() == "clases.php"){
             for(i=0; i < hijosLista.length; i++){

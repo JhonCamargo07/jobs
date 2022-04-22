@@ -11,12 +11,13 @@
             echo '<script language="javascript">
                     alertaFlotante("Error en los datos", "Verifiquelos e intente nuevamente", "#0EA3E3", "imagenes/error.gif");
                 </script>';
-        }elseif(numCharacters($usuario, 3, 30) || numCharacters($password, 5, 30)){
+            echo '<div><strong><p><span class="required">*</span>Ningun campo puede estar vacio</p></strong></div>';
+        }/* elseif(numCharacters($usuario, 3, 30) || numCharacters($password, 5, 30)){
             // La función 'NumCharacters' verifica si la cantidad de caracteres de un elemento está entre el rango que se le pase.
             echo '<script>
                     alertaFlotante("Error en la cantidad de caracteres", "Caracteres miminos: 3, maximos: 30", "#0EA3E3", "imagenes/error.gif");
                 </script>';
-        }else{
+        } */else{
             // Variable para recibir lo que devuelva la funcion login del modelo.
             $modelo = new Login();
             // La función 'limpiarTexto' elimina caracteres no permitidos como <>'\...
@@ -26,12 +27,14 @@
                 echo '<script>
                         alertaFlotante("Error en los datos", "Verifiquelos e intente nuevamente", "#0EA3E3", "imagenes/error.gif");
                     </script>';
+                echo '<div><strong><p><span class="required">*</span>Usuario o contraseña incorrectos</p></strong></div>';
             }else{
                 if($modelo->validarEstado()){
 
                     echo "<script>
-                            alertaFlotante('El usuario ya votó', 'El usuario ya eligió a un presidente, por ende, no puede votar nuevamente', '#0EA3E3', 'imagenes/error.gif');
+                            alertaFlotante('Usuario bloqueado', 'El usuario se encuentra bloqueado', '#0EA3E3', 'imagenes/error.gif');
                         </script>";
+                    echo '<div><strong><p><span class="required">*</span>El usuario se encuentra bloqueado</p></strong></div>';
                 }else{
                     // Si lo que devuelve la funcion es true (estado activo), lo deja ingresar al menu.
                     header('Location: jobs.php');

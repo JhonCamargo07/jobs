@@ -554,10 +554,10 @@ form * {
     padding: 10px 15px;
     margin-bottom: 15px;
     transition: .3s ease all;
-    border: 1px solid var(--secondary);
+    border: 2px solid var(--secondary);
 }
 
-.input:focus{border: 1px solid var(--black);}
+.input:focus{border: 2px solid var(--primary);}
 
 .input-mediano{width: 50%;}
 

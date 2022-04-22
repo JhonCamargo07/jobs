@@ -62,6 +62,61 @@ var alertaFlotanteConRedirecion = (titulo, texto, colorBoton, imagen, direccion)
 }
 
 
+//!==============================================================
+//!=========================== Mensaje de bienvenida =============================
+//!==============================================================
+
+var mensajeBienvenida = "",
+    fecha = new Date(),
+    horaActual = fecha.getHours();
+
+    if(horaActual >= 0 && horaActual < 12){
+        mensajeBienvenida = "Buenos días";
+    }else if(horaActual >= 12 && horaActual < 18){
+        mensajeBienvenida = "Buenas tardes";
+    }else if(horaActual >= 18 && horaActual < 24){
+        mensajeBienvenida = "Buenas noches";
+    }else{
+        mensajeBienvenida = "Bienvenido";
+    }
+
+    // var hora = fecha.getHours() + '-' + fecha.getMinutes() + '-' + fecha.getSeconds();
+
+    // console.log(hora);
+
+var alertaBienvenida = () => {
+    swal.fire({
+        toast: true,
+        position: 'bottom-end',
+        title: "<span style='color: #fff'>¡Hola! " + mensajeBienvenida + "</span>",
+        showConfirmButton: false,
+        icon: 'success',
+        background:'#2D85CC',
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+        },
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+            }
+    });
+}
+
+// Saber de que página viene
+var referrer = document.referrer;
+
+window.onload = () => {
+    // Si viene de la página login, muestra el mensaje de bienveida sino no hace nada
+    if(referrer == 'http://localhost/jobs/vistas/index.php'){
+        alertaBienvenida();
+    }  
+}
+
 var eliminar = false;
 var AlertaConfirmacion = (/* titulo, ok, no, mensajeOk, imagen  */) => {
     const swalWithBootstrapButtons = Swal.mixin({

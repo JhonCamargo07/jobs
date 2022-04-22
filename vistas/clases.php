@@ -23,15 +23,7 @@
                 $Usuario = $listar->listarClases(date("Y"));
                 if($Usuario != null){
                     foreach($Usuario as $r){
-            ?>
-
-                        <div class="card margin-bottom">
-                            <h5 class="margin-bottom"><?php echo $r['NombreClase'] . " (" . $r['HoraInicio'] . " - " . $r['HoraFin'] . ")";?></h5>
-                            <a href="<?php echo $r['EnlaceClase']; ?>"><i class="icono fas fa-laptop-code"></i></a>
-                            <a href="<?php echo $r['EnlacePortafolio']; ?>"><i class="icono fas fa-briefcase"></i></a>
-                        </div>
-
-            <?php
+                        include('div-clases.php');
                     }
                 }else{
                     echo '<script>

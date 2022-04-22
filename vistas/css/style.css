@@ -53,7 +53,7 @@ header{
 }
 
 .header-img{
-    width: 18.125rem;
+    width: 100px;
     height: auto;
 }
 
@@ -106,6 +106,51 @@ nav{
     align-items: center; */
 }
 
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 20px;
+    grid-template-rows: auto;
+}
+
+.contenido .div-derecha{
+    margin-top: 100px;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+.contenido .div-izquierda{
+    margin: auto;
+    margin-left: 100px;
+}
+
+.contenido .div-izquierda p{
+    font-size: 25px;
+    margin-top: 0.9375rem;
+}
+
+.logo{
+    width: 400px;
+    height: auto;
+}
+
+.error{
+    border: 2px solid #ff0000;
+}
+
+.mensaje__input-error{
+    display: none;
+    color: #ff0000;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 a{
     color: #000900;
 }
@@ -120,6 +165,19 @@ label{
 
 .margin-auto{
     margin: auto;
+}
+
+.eye{
+    position: relative;
+    top: -43px;
+    left: calc(100% - 40px);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.eye:hover{
+    background: rgba(155,155,155,0.5);
+    border-radius: 100%;
 }
 
 footer{
@@ -148,6 +206,10 @@ footer a{
 .footer-terminos:hover{
     color: #011; 
     border-bottom: 1px solid #011;
+}
+
+.footer-oculto{
+    margin-top: 100px;
 }
 
 

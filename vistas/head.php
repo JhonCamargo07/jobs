@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/autostyle.css"> 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="imagenes/clase.png">
+    <link rel="icon" href="imagenes/icon-task.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://kit.fontawesome.com/dca352768f.js" crossorigin="anonymous"></script>
     <script src="js/sweetalert2.js"></script>

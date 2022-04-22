@@ -195,5 +195,14 @@
             }
         }
 
+        //Metodo para dar un mensaje segun la cantidad de tareas que hayan
+        public function tareasMayorCero($numero){
+            if($numero == 0){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
     }
 ?>

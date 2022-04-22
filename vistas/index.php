@@ -1,38 +1,65 @@
-<?php
-    $title = "Login";
-    include("head.php");
-?>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/autostyle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imagenes/icon-jobs.png">
+    <title>Clases - ADSI</title>
+    <script src="https://kit.fontawesome.com/dca352768f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="js/alerta.js"></script>
+    <script src="js/sweetalert2.js"></script>
+</head>
 <body>
     <div class="">
-
-        <?php
-            include("header.php");
-        ?>
         
-        <div class="card card-login margin-top">
+        <div class="contenido margin-vertical">
+            
+            <div class="div-izquierda">
+                <div class="text-center"><img src="imagenes/task.png" class="logo text-center" alt="Logo jobs"></div>
+                <p><strong>Task</strong> te ayuda a recordar las actividades que tienes que hacer diariamente.</p>
+            </div>
 
-            <h1 class="text-center margin-bottom">Iniciar sesión</h1>
-            <?php require('../controladores/login.php'); ?>
-            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-                <div class="form-control">
-                    <label for="usuario">Usuario:</label>
-                    <input type="text" name="usuario" id="usuario" class="input" maxlength="30" value="<?php if(isset($usuario)){echo $usuario;} ?>" placeholder="Escribe tu usuario" autofocus>
+            <div class="div-derecha card">
+                
+                <?php require('../controladores/login.php'); ?>
+                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" id="formulario">
+
+                    <div>
+                        <input type="hidden" id="nombre" value="Nulo">
+                        <div><p class="mensaje__input-error" id="mensaje-error3"></p></div>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="usuario" id="usuario" class="input height-grande" maxlength="30" value="<?php if(isset($usuario)){echo $usuario;} ?>" placeholder="Correo electr&#243;nico">
+                        <div><p class="mensaje__input-error" id="mensaje-error">El correo es obligatorio</p></div>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" name="password" id="password" class="input height-grande" maxlength="30" value="<?php if(isset($password)){echo $password;} ?>" placeholder="Contrase&#241;a">
+                        <i class="eye fas fa-eye-slash" id="icono"></i>
+                        <div><p class="mensaje__input-error" id="mensaje-error2">La contrase&#241;a es obligatoria</p></div>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" name="generar" class="btn btn-primary height-grande width-grande" value="Iniciar sesi&#243;n">
+                    </div>
+                    <p class="text-center margin-vertical"><a href="" class="color-primary">¿Olvidaste tu contraseña?</a></p>
+                    <hr class="linea">
+
+                </form>
+                <div class="text-center margin-top">
+                    <a href="signup.php"><button class="btn btn-success height-mediano width-mediano">Crear una cuenta</button></a>
                 </div>
 
-                <div class="form-control">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" name="password" id="password" class="input" maxlength="30" value="<?php if(isset($password)){echo $password;} ?>" placeholder="Escribe tu contraseña">
-                </div>
-                <div class="text-center">
-                    <input type="submit" name="generar" class="btn btn-outline-success" value="Iniciar sesión">
-                </div>
-            </form>
+            </div>
+
         </div>
 
         <?php
             include("footer.php");
         ?>
     </div>
-    
+    <script src="js/validacion.js"></script>
 </body>
 </html>

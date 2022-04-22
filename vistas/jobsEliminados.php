@@ -19,8 +19,8 @@
             require('../controladores/jobs.php');
         ?>
         <div class="contenedor card margin-top">
-            <p class="card-2 bg-light-hover margin-bottom"><strong><span class="required">*</span>Estos trabajos se eliminan automaticamente despues de 15 días<span class="required">*</span></strong></p>
-            <h1 class="text-center margin-bottom">Últimas tareas eliminadas</h1>
+            <p class="card-2 bg-light-hover margin-bottom"><strong><span class="required">*</span>Estas tareas se eliminan autom&#225;ticamente despu&#233;s de 15 d&#237;as<span class="required">*</span></strong></p>
+            <h1 class="text-center margin-bottom">&#218;ltimas tareas eliminadas</h1>
             <div class="jobs">
                 <?php
                     $usuario = $listar->selectJobsEliminados($_SESSION['datos']['IDUsuarioPK']);
@@ -29,7 +29,7 @@
                             include('div-jobs-eliminados.php');
                         }
                     }else{
-                        $mensajeError = "No se encontraron tareas eliminadas ultimamente";
+                        $mensajeError = "No se encontraron tareas eliminadas &#218;ltimamente";
                         include('div-error.php');
                     }
                 ?>

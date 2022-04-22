@@ -1,7 +1,8 @@
         <footer class="card">
             <div>
-                <p>Hecho por Jhon Camargo</p>
-                <p>Al utilizar este sitio, acepta los <a href="terminos.php" class="footer-terminos">términos de uso</a>.</p>
+                <!-- https://acortar.link/nH5gzL -->
+                <p>Hecho por <a href="http://jhoncamargo.000webhostapp.com" target="_blank" class="footer-terminos">Jhon Camargo</a></p>
+                <p>Al utilizar este sitio, acepta los <a href="terminos.php" class="footer-terminos">t&#233;rminos de uso</a>.</p>
             </div>
             <div>
                 <a href="https://www.facebook.com/jhonalex.camargo.902/" target="_blanck"><i class="fab icono fa-facebook"></i></a>
@@ -11,6 +12,6 @@
             </div>
             <div>
                 <p>Todos los derechos reservados | Copyright <i class="far fa-copyright"></i></p>
-                <p class="text-center">Versión 1.1 (php)</p>
+                <p class="text-center">Versi&#243;n 1.2</p>
             </div>
         </footer>

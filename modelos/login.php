@@ -44,7 +44,7 @@
 
         public function validarSesion(){
             if($_SESSION['datos']['IDUsuarioPK'] == null){
-                header('location: index.php');
+                header('location: ../');
             }
         }
         

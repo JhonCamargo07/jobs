@@ -1,7 +1,7 @@
         <header class="card card-2">
             <div class="header-div">
-                <!-- <img src="imagenes/variedades-ampi_logo.png" alt="Logo" class="header-img"> -->
-                <h1 class="header-titulo">ADSI</h1>
+                <a href="jobs.com"><img src="imagenes/icon-task.png" alt="Logo" class="header-img"></a>
+                <!-- <h1 class="header-titulo">ADSI</h1> -->
             </div>
             <div class="header-div">
                 <?php
