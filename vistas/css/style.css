@@ -1,29 +1,31 @@
-*{
-    padding: 0px;
-    margin: 0px;
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
-body::-webkit-scrollbar-thumb{
+
+body::-webkit-scrollbar-thumb {
     background: green;
     border-radius: 10px;
 }
 
-.card-login{
+.card-login {
     width: 35%;
     margin: 20px auto;
 }
 
-.card-2{
+.card-2 {
     padding: 10px;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.header-div{
+.header-div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,7 +33,7 @@ header{
     justify-content: center;
 }
 
-.card-flex{
+.card-flex {
     /* display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,27 +45,28 @@ header{
     grid-auto-rows: repeat(2, auto);
 }
 
-.icono2{
+.icono2 {
     color: var(--danger);
 }
+
 .icono_pequeño:hover,
-.icono2:hover{
+.icono2:hover {
     background-color: transparent;
     color: var(--danger-hover);
 }
 
-.header-img{
+.header-img {
     width: 100px;
     height: auto;
 }
 
-.header-titulo{
+.header-titulo {
     align-items: center;
     justify-content: center;
     margin-left: 15px;
 }
 
-nav{
+nav {
     color: #000;
     display: flex;
     flex-direction: row;
@@ -71,7 +74,7 @@ nav{
     margin: 10px 0px;
 }
 
-.nav-enlaces ul{
+.nav-enlaces ul {
     /* display: flex;
     color: #000;
     flex-wrap: wrap;
@@ -84,11 +87,11 @@ nav{
     list-style: none;
 }
 
-.nav-enlaces ul ul{
+.nav-enlaces ul ul {
     display: none;
 }
 
-.nav-enlaces ul li ul{
+.nav-enlaces ul li ul {
     position: absolute;
 }
 
@@ -106,39 +109,39 @@ nav{
     align-items: center; */
 }
 
-.contenido{
+.contenido {
     display: grid;
     grid-template-columns: 1fr 0.7fr;
     gap: 20px;
     grid-template-rows: auto;
 }
 
-.contenido .div-derecha{
+.contenido .div-derecha {
     margin-top: 100px;
     border-radius: 5px;
     margin-right: 50px;
 }
 
-.contenido .div-izquierda{
+.contenido .div-izquierda {
     margin: auto;
     margin-left: 100px;
 }
 
-.contenido .div-izquierda p{
+.contenido .div-izquierda p {
     font-size: 25px;
     margin-top: 0.9375rem;
 }
 
-.logo{
+.logo {
     width: 400px;
     height: auto;
 }
 
-.error{
+.error {
     border: 2px solid #ff0000;
 }
 
-.mensaje__input-error{
+.mensaje__input-error {
     display: none;
     color: #ff0000;
     text-align: center;
@@ -146,28 +149,28 @@ nav{
     font-weight: bold;
 }
 
-.input{
+.input {
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
-a{
+a {
     color: #000900;
 }
 
-label{
+label {
     font-weight: bold;
 }
 
-.form-group{
+.form-group {
     margin: 5px 0;
 }
 
-.margin-auto{
+.margin-auto {
     margin: auto;
 }
 
-.eye{
+.eye {
     position: relative;
     top: -43px;
     left: calc(100% - 40px);
@@ -175,55 +178,85 @@ label{
     cursor: pointer;
 }
 
-.eye:hover{
-    background: rgba(155,155,155,0.5);
+.eye:hover {
+    background: rgba(155, 155, 155, 0.5);
     border-radius: 100%;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
+    -webkit-box-shadow: 0px -10px 29px -8px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 0px -10px 29px -8px rgba(0, 0, 0, 0.37);
+    box-shadow: 0px -10px 29px -8px rgba(0, 0, 0, 0.37);
 }
-footer a{
+
+footer a {
     text-decoration: none;
 }
 
-.icon-nav{
+.icon-nav {
     font-size: 20px;
     margin-right: 5px;
 }
 
-.consultar{
+.consultar {
     display: flex;
 }
 
-.footer-terminos{
-    color: #000; 
+.footer-terminos {
+    color: #000;
     text-decoration: none;
 }
-.footer-terminos:hover{
-    color: #011; 
+
+.footer-terminos:hover {
+    color: #011;
     border-bottom: 1px solid #011;
 }
 
-.footer-oculto{
+.footer-oculto {
     margin-top: 100px;
 }
 
 
-@media screen and (max-width: 980px){
-    footer{
+@media screen and (max-width: 980px) {
+
+    /* footer{
         justify-content: space-around;
-    }
-    .card-login{
+    } */
+    .card-login {
         width: 65%;
     }
 }
 
-@media screen and (max-width: 500px){
-    .card-login{
+@media screen and (max-width: 500px) {
+    .card-login {
         width: 85%;
     }
+}
+
+.text-10{
+    font-size: 0.625rem;
+}
+
+.text-12{
+    font-size: 0.75rem;
+}
+
+.text-14{
+    font-size: 0.875rem;
+}
+.text-18{
+    font-size: 1.125rem;
+}
+
+.text-20{
+    font-size: 1.25rem;
+}
+
+.text-22{
+    font-size: 1.375rem;
 }
